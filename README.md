@@ -1,145 +1,137 @@
-# 19 Progressive Web Applications (PWA): Text Editor
+# PWA Text Editor
 
-## Your Task
+<br/>
+<p align="center">
+<!--     <a href="https://sequelize.org/">
+        <img alt="Sequelize ORM - A promise-based Node.js ORM for Postgres, MySQL, MariaDB, SQLite, and Microsoft SQL Server. It features solid transaction support, relations, eager and lazy loading, read replication, and more" src="https://img.shields.io/static/v1.svg?label=Sequelize ORM&message=Node.js&color=blueviolet" /></a>
+    <a href="https://www.mysql.com/">
+        <img alt="MySQL - An open-source relational database management system" src="https://img.shields.io/static/v1.svg?label=MySQL&message=database&color=yellowgreen" /></a> -->
+    <a href="https://www.render.com/">
+        <img alt="Render (for deployment) - A platform as a service (PaaS) that enables developers to build, run, and operate applications entirely in the cloud" src="https://img.shields.io/static/v1.svg?label=Render&message=deployment&color=orange" /></a>
+    <a href="https://www.npmjs.com/package/express-session">
+        <img alt="express-session - A session middleware for Express.js, used for handling user sessions" src="https://img.shields.io/static/v1.svg?label=express-session&message=middleware&color=green" /></a>
+<!--     <a href="https://socket.io/">
+        <img alt="Socket.IO (for real-time collaboration) - Enables real-time, bidirectional, and event-based communication between web clients and servers" src="https://img.shields.io/static/v1.svg?label=Socket.IO&message=real-time collaboration&color=yellow" /></a> -->
+    <a href="https://nodejs.org/" >
+        <img alt="Node.js - A JavaScript runtime built on Chrome's V8 JavaScript engine, used for building fast and scalable network applications" src="https://img.shields.io/static/v1.svg?label=Node.js&message=JavaScript runtime&color=lightyellow" /></a>
+    <a href="https://expressjs.com/" >
+        <img alt="Express.js - A minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications" src="https://img.shields.io/static/v1.svg?label=Express.js&message=web app framework&color=blue" /></a>
+    <a href="https://www.npmjs.com/package/dotenv" >
+        <img alt="dotenv NPM" src="https://img.shields.io/static/v1.svg?label=npm&message=dotenv&color=brightgreen" /></a>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" >
+        <img alt="JavaScript - ES6" src="https://img.shields.io/static/v1.svg?label=JavaScript&message=ES6&color=violet" /></a>
+    <a href="https://github.com/">
+        <img alt="GitHub (for repository hosting and project management) - Provides hosting for software development and version control using Git" src="https://img.shields.io/static/v1.svg?label=GitHub&message=hosting&color=lightgrey" /></a>
+    <a href="https://git-scm.com/">
+        <img alt="Git (for version control) - A free and open-source distributed version control system" src="https://img.shields.io/static/v1.svg?label=Git&message=version control&color=black" /></a>
+    <a href="https://unb.ca/cel/bootcamps/coding.html">
+        <img alt="University of New Brunswick" src="https://img.shields.io/static/v1.svg?label=UNB&message=Bootcamp&color=red" /></a>
+    <a href="https://opensource.org/license/mit/">
+        <img alt="The MIT License" src="https://img.shields.io/static/v1.svg?label=License&message=MIT&color=lightgreen" /></a>
+</p>
+<br/>
 
-As you have progressed through this course, you have put together a number of impressive projects that you can show off to potential employers. This project is no exception; in fact, it features some of the most impressive expressions of the concepts you have learned so far.
+## Description
 
-Your task is to build a text editor that runs in the browser. The app will be a single-page application that meets the PWA criteria. Additionally, it will feature a number of data persistence techniques that serve as redundancy in case one of the options is not supported by the browser. The application will also function offline.
+PWA Text Editor is a project that harnesses the power of Progressive Web Applications (PWA) to offer a seamless, offline-capable text editing experience. This application encapsulates advanced data persistence techniques and offline functionality. Dive into building a browser-based text editor that not only meets PWA criteria but also ensures your notes and code snippets are accessible anytime, anywhere.
 
-To build this text editor, you will start with an existing application and implement methods for getting and storing data to an IndexedDB database. You will use a package called `idb`, which is a lightweight wrapper around the IndexedDB API. It features a number of methods that are useful for storing and retrieving data, and is used by companies like Google and Mozilla.
+## Table of Contents
 
-You will deploy this full-stack application to Render using the [Render Deployment Guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/render/render-deployment-guide).
+- [Demo](#demo)
+- [Features](#features)
+- [Technology Stack](#technology-stack)
+- [Getting Started](#getting-started)
+- [Usage](#usage)
+- [Deployment](#deployment)
+- [Development Guidelines](#development-guidelines)
+- [Contributing](#contributing)
+- [Questions](#questions)
+- [License](#license)
 
-**Important**: Make sure your submission includes the `.npmrc` file in this starter code.  This will ensure your application will deploy properly to Render.
+## Demo
 
-## User Story
+You can simply visit the link [PWA Text Editor][pwa-text-editor]
 
-```md
-AS A developer
-I WANT to create notes or code snippets with or without an internet connection
-SO THAT I can reliably retrieve them for later use
+## Features
+
+- **Single-Page Application:** Crafted as a SPA, the text editor ensures a smooth, uninterrupted user experience.
+- **PWA Compliance:** Adheres to PWA standards, offering functionalities like offline availability and app-like experience.
+- **Data Persistence:** Utilizes IndexedDB with the `idb` package for robust data storage and retrieval.
+- **Offline Functionality:** With service workers, you can edit, save, and access your notes or code snippets without an internet connection.
+- **Deployment:** Fully deployable via Render, ensuring a wide reach and easy access.
+
+## Technology Stack
+
+- **IndexedDB & idb Package:** For data persistence and storage.
+- **Webpack:** For bundling JavaScript files and plugin management.
+- **Service Workers & Workbox:** For offline functionality and resource caching.
+- **Render:** For deploying the full-stack application.
+
+## Getting Started
+
+Before diving into development, ensure you've cloned the starter code repository to your local machine. Do not fork the starter code; instead, clone it directly to maintain a separate version control history.
+
+### Prerequisites
+
+- Node.js installed on your local machine.
+- Basic understanding of JavaScript, HTML, and CSS.
+
+### Installation
+
+1. **Clone the Repository:** Start by cloning this repository to your local machine to get access to all necessary files.
+
+```bash
+git clone https://github.com/naturuplift/PWATextEditor.git
 ```
 
-## Acceptance Criteria
+2. **Install Dependencies:** Navigate to the project directory and run `npm install` to install dependencies.
 
-```md
-GIVEN a text editor web application
-WHEN I open my application in my editor
-THEN I should see a client server folder structure
-WHEN I run `npm run start` from the root directory
-THEN I find that my application should start up the backend and serve the client
-WHEN I run the text editor application from my terminal
-THEN I find that my JavaScript files have been bundled using webpack
-WHEN I run my webpack plugins
-THEN I find that I have a generated HTML file, service worker, and a manifest file
-WHEN I use next-gen JavaScript in my application
-THEN I find that the text editor still functions in the browser without errors
-WHEN I open the text editor
-THEN I find that IndexedDB has immediately created a database storage
-WHEN I enter content and subsequently click off of the DOM window
-THEN I find that the content in the text editor has been saved with IndexedDB
-WHEN I reopen the text editor after closing it
-THEN I find that the content in the text editor has been retrieved from our IndexedDB
-WHEN I click on the Install button
-THEN I download my web application as an icon on my desktop
-WHEN I load my web application
-THEN I should have a registered service worker using workbox
-WHEN I register a service worker
-THEN I should have my static assets pre cached upon loading along with subsequent pages and static assets
-WHEN I deploy to Render
-THEN I should have proper build scripts for a webpack application
+```bash
+cd pwa-text-editor
+npm install
 ```
 
-## Mock-Up
+3. **Start the Application:** Once the dependencies are installed, you can start the application using the following command:
 
-The following animation demonstrates the application functionality:
+```bash
+npm run start
+```
 
-![Demonstration of the finished Module 19 Challenge being used in the browser and then installed.](./Assets/00-demo.gif)
+This will launch both the backend and frontend portions of the application, making it accessible via your browser.
 
-The following image shows the application's `manifest.json` file:
+## Usage
 
-![Demonstration of the finished Module 19 Challenge with a manifest file in the browser.](./Assets/01-manifest.png)
+- **Editing:** Simply type in the text editor to begin creating your notes or code snippets.
+- **Saving:** Your work is automatically saved to IndexedDB, ensuring you won't lose your progress, even if you go offline.
+- **Accessing Offline:** Thanks to the PWA functionality, you can continue to use the text editor without an internet connection.
 
-The following image shows the application's registered service worker:
+## Deployment
 
-![Demonstration of the finished Module 19 Challenge with a registered service worker in the browser.](./Assets/02-service-worker.png)
+This application is deployed on Render, showcasing its full-stack capabilities. For details on deploying your own version, refer to the Render Deployment Guide and ensure your project is configured for PWA standards.
 
-The following image shows the application's IndexedDB storage:
+## Development Guidelines
 
-![Demonstration of the finished Module 19 Challenge with a IndexedDB storage named 'jate' in the browser.](./Assets/03-idb-storage.png)
+- **File Structure:** Upon opening the application in your editor, you should observe a client-server folder structure.
+- **Webpack Usage:** Ensure your JavaScript files are bundled using webpack, facilitating a streamlined development process.
+- **Service Worker Registration:** Utilize Workbox to register your service worker, enabling offline capabilities and resource caching.
+- **Data Handling:** Implement methods for storing and retrieving data with IndexedDB to ensure content persistence.
 
-## Grading Requirements
+## Contributing
 
-> **Note**: If a Challenge assignment submission is marked as “0”, it is considered incomplete and will not count towards your graduation requirements. Examples of incomplete submissions include the following:
->
-> * A repository that has no code
->
-> * A repository that includes a unique name but nothing else
->
-> * A repository that includes only a README file but nothing else
->
-> * A repository that only includes starter code
+I'm always open to contributions and collaboration. If you're interested in contributing to this project, please fork the repository and submit a pull request, or you can simply open an issue with the tag "enhancement".
 
-This Challenge is graded based on the following criteria:
+## Questions
 
-### Technical Acceptance Criteria: 40%
+For any questions about this project, please contact me via:
 
-* Satisfies all of the above acceptance criteria plus the following:
+- Email: arnaldosepulveda@gmail.com
+- GitHub: @[naturuplift](https://github.com/naturuplift)
+- LinkedIn: [LinkedIn Profile](https://www.linkedin.com/in/arnaldo-sepulveda-7b321022/)
 
-  * Uses IndexedDB to create an object store and includes both GET and PUT methods
+## License
 
-  * The application works without an internet connection
+This project is licensed under the MIT License. See the [LICENSE][MIT] file for more details.
 
-  * Automatically saves content inside the text editor when the DOM window is unfocused
 
-  * Bundled with webpack
-
-  * Create a service worker with workbox that Caches static assets
-
-  * The application should use babel in order to use async / await
-
-  * Application must have a generated `manifest.json` using the `WebpackPwaManifest` plug-in
-
-  * Can be installed as a Progressive Web Application
-
-### Deployment: 32%
-
-* Application deployed to Render at live URL with build scripts
-
-* Application loads with no errors
-
-* Application GitHub URL submitted
-
-* GitHub repo contains application code
-
-### Application Quality: 15%
-
-* Application user experience is intuitive and easy to navigate
-
-* Application user interface style is clean and polished
-
-* Application resembles the mock-up functionality provided in the Challenge instructions
-
-### Repository Quality: 13%
-
-* Repository has a unique name
-
-* Repository follows best practices for file structure and naming conventions
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages
-
-* Repository contains quality README file with description, screenshot, and link to deployed application
-
-## Review
-
-You are required to submit the following for review:
-
-* The URL of the deployed application
-
-* The URL of the GitHub repository, with a unique name and a README describing the project
-
-- - -
-© 2024 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
-# PWATextEditor
+[pwa-text-editor]: <https://My-PWA-Text-Editor-App.onrender.com/> 
+[MIT]: <https://github.com/naturuplift/PWATextEditor/blob/main/LICENSE>
