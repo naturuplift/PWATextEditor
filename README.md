@@ -4,6 +4,8 @@
 <p align="center">
     <a href="https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps">
         <img alt="PWA - A progressive web app (PWA) is an app that's built using web platform technologies, but that provides a user experience like that of a platform-specific app" src="https://img.shields.io/static/v1.svg?label=PWA&message=single page web application&color=brightgreen" /></a>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API">
+        <img alt="IndexedDB is a low-level API for client-side storage of significant amounts of structured data, including files/blobs" src="https://img.shields.io/static/v1.svg?label=IndexedDB&message=API&color=blue" /></a>
     <a href="https://www.render.com/">
         <img alt="Render (for deployment) - A platform as a service (PaaS) that enables developers to build, run, and operate applications entirely in the cloud" src="https://img.shields.io/static/v1.svg?label=Render&message=deployment&color=orange" /></a>
     <a href="https://webpack.js.org/">
