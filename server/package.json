@@ -7,10 +7,10 @@
         "server": "nodemon server.js --ignore client"
     },
     "keywords": [],
-    "author": "",
-    "license": "ISC",
+    "author": "Arnaldo Sepulveda",
+    "license": "MIT",
     "dependencies": {
-        "express": "^4.17.1"
+        "express": "^4.19.1"
     },
     "devDependencies": {
         "nodemon": "^2.0.4"
