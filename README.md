@@ -3,7 +3,7 @@
 <br/>
 <p align="center">
     <a href="https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps">
-        <img alt="PWA - A progressive web app (PWA) is an app that's built using web platform technologies, but that provides a user experience like that of a platform-specific app" src="https://img.shields.io/static/v1.svg?label=PWA&message=single page web application&color=brightgreen" /></a>
+        <img alt="PWA - A progressive web app (PWA) is an app that's built using web platform technologies, but that provides a user experience like that of a platform-specific app" src="https://img.shields.io/static/v1.svg?label=PWA&message=single page web application&color=lightgreen" /></a>
     <a href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API">
         <img alt="IndexedDB is a low-level API for client-side storage of significant amounts of structured data, including files/blobs" src="https://img.shields.io/static/v1.svg?label=IndexedDB&message=API&color=blue" /></a>
     <a href="https://www.render.com/">
@@ -19,7 +19,7 @@
     <a href="https://unb.ca/cel/bootcamps/coding.html">
         <img alt="University of New Brunswick" src="https://img.shields.io/static/v1.svg?label=UNB&message=Bootcamp&color=red" /></a>
     <a href="https://opensource.org/license/mit/">
-        <img alt="The MIT License" src="https://img.shields.io/static/v1.svg?label=License&message=MIT&color=lightgreen" /></a>
+        <img alt="The MIT License" src="https://img.shields.io/static/v1.svg?label=License&message=MIT&color=brightgreen" /></a>
 </p>
 <br/>
 
