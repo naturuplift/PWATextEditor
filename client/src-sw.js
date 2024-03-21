@@ -24,7 +24,39 @@ warmStrategyCache({
   strategy: pageCache,
 });
 
+// Implement asset caching
 registerRoute(({ request }) => request.mode === 'navigate', pageCache);
 
-// TODO: Implement asset caching
-registerRoute();
+// Cache CSS, JavaScript, and Web Worker requests with a Stale-While-Revalidate strategy
+registerRoute(
+  ({ request }) => request.destination === 'style' || request.destination === 'script' || request.destination === 'worker',
+  new StaleWhileRevalidate({
+    cacheName: 'asset-cache',
+    plugins: [
+      new CacheableResponsePlugin({
+        statuses: [0, 200],
+      }),
+      new ExpirationPlugin({
+        maxEntries: 60, // Limit number of files
+        maxAgeSeconds: 30 * 24 * 60 * 60, // Cache for 30 Days
+      }),
+    ],
+  })
+);
+
+// Cache image files with a Cache First strategy for long term caching
+registerRoute(
+  ({ request }) => request.destination === 'image',
+  new CacheFirst({
+    cacheName: 'image-cache',
+    plugins: [
+      new CacheableResponsePlugin({
+        statuses: [0, 200],
+      }),
+      new ExpirationPlugin({
+        maxEntries: 30, // Limit number of images
+        maxAgeSeconds: 60 * 24 * 60 * 60, // Cache for 60 Days
+      }),
+    ],
+  })
+);
