@@ -4,6 +4,7 @@ const { registerRoute } = require('workbox-routing');
 const { CacheableResponsePlugin } = require('workbox-cacheable-response');
 const { ExpirationPlugin } = require('workbox-expiration');
 const { precacheAndRoute } = require('workbox-precaching/precacheAndRoute');
+importScripts('https://storage.googleapis.com/workbox-cdn/releases/6.2.4/workbox-sw.js');
 
 precacheAndRoute(self.__WB_MANIFEST);
 
