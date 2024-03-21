@@ -3,7 +3,7 @@
 <br/>
 <p align="center">
     <a href="https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps">
-        <img alt="PWA - A progressive web app (PWA) is an app that's built using web platform technologies, but that provides a user experience like that of a platform-specific app" src="https://img.shields.io/static/v1.svg?label=PWA&message=single page web application&color=brightgreen" /></a>
+        <img alt="PWA - A progressive web app (PWA) is an app that's built using web platform technologies, but that provides a user experience like that of a platform-specific app" src="https://img.shields.io/static/v1.svg?label=PWA&message=single page web application&color=lightgreen" /></a>
     <a href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API">
         <img alt="IndexedDB is a low-level API for client-side storage of significant amounts of structured data, including files/blobs" src="https://img.shields.io/static/v1.svg?label=IndexedDB&message=API&color=blue" /></a>
     <a href="https://www.render.com/">
@@ -19,7 +19,7 @@
     <a href="https://unb.ca/cel/bootcamps/coding.html">
         <img alt="University of New Brunswick" src="https://img.shields.io/static/v1.svg?label=UNB&message=Bootcamp&color=red" /></a>
     <a href="https://opensource.org/license/mit/">
-        <img alt="The MIT License" src="https://img.shields.io/static/v1.svg?label=License&message=MIT&color=lightgreen" /></a>
+        <img alt="The MIT License" src="https://img.shields.io/static/v1.svg?label=License&message=MIT&color=brightgreen" /></a>
 </p>
 <br/>
 
@@ -36,6 +36,7 @@ PWA Text Editor is a project that harnesses the power of Progressive Web Applica
 - [Usage](#usage)
 - [Deployment](#deployment)
 - [Development Guidelines](#development-guidelines)
+- [Starter Code](#starter-code)
 - [Contributing](#contributing)
 - [Questions](#questions)
 - [License](#license)
@@ -108,6 +109,10 @@ This application is deployed on Render, showcasing its full-stack capabilities. 
 - **Service Worker Registration:** Utilize Workbox to register your service worker, enabling offline capabilities and resource caching.
 - **Data Handling:** Implement methods for storing and retrieving data with IndexedDB to ensure content persistence.
 
+## Starter Code
+
+To start with this project we used the following [Starter Code][starter-code]
+
 ## Contributing
 
 I'm always open to contributions and collaboration. If you're interested in contributing to this project, please fork the repository and submit a pull request, or you can simply open an issue with the tag "enhancement".
@@ -125,5 +130,6 @@ For any questions about this project, please contact me via:
 This project is licensed under the MIT License. See the [LICENSE][MIT] file for more details.
 
 
-[pwa-text-editor]: <https://My-PWA-Text-Editor-App.onrender.com/> 
+[pwa-text-editor]: <https://My-PWA-Text-Editor-App.onrender.com/>
+[starter-code]: <https://github.com/coding-boot-camp/cautious-meme>
 [MIT]: <https://github.com/naturuplift/PWATextEditor/blob/main/LICENSE>
