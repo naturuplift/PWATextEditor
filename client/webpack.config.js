@@ -5,7 +5,6 @@ const { InjectManifest } = require('workbox-webpack-plugin');
 
 // Add and configure workbox plugins for a service worker and manifest file.
 // Add CSS loaders and babel to webpack.
-
 module.exports = () => ({
   mode: 'development',
   entry: {
@@ -28,7 +27,7 @@ module.exports = () => ({
     // Injects custom service worker
     new InjectManifest({
       swSrc: './src-sw.js',
-      swDest: 'service-worker.js',
+      swDest: 'src-sw.js',
     }),
     // Creates a manifest.json file
     new WebpackPwaManifest({
@@ -52,6 +51,7 @@ module.exports = () => ({
   ],
   module: {
     rules: [
+      // Add CSS loaders to webpack
       {
         test: /\.css$/i,
         use: ['style-loader', 'css-loader'],

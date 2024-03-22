@@ -1,10 +1,9 @@
 const { offlineFallback, warmStrategyCache } = require('workbox-recipes');
-const { CacheFirst } = require('workbox-strategies');
+const { CacheFirst, StaleWhileRevalidate } = require('workbox-strategies');
 const { registerRoute } = require('workbox-routing');
 const { CacheableResponsePlugin } = require('workbox-cacheable-response');
 const { ExpirationPlugin } = require('workbox-expiration');
 const { precacheAndRoute } = require('workbox-precaching/precacheAndRoute');
-importScripts('https://storage.googleapis.com/workbox-cdn/releases/6.2.4/workbox-sw.js');
 
 precacheAndRoute(self.__WB_MANIFEST);
 
@@ -25,39 +24,37 @@ warmStrategyCache({
   strategy: pageCache,
 });
 
-// Implement asset caching
+
 registerRoute(({ request }) => request.mode === 'navigate', pageCache);
 
-// Cache CSS, JavaScript, and Web Worker requests with a Stale-While-Revalidate strategy
+// Implement asset caching
 registerRoute(
-  ({ request }) => request.destination === 'style' || request.destination === 'script' || request.destination === 'worker',
-  new StaleWhileRevalidate({
-    cacheName: 'asset-cache',
-    plugins: [
-      new CacheableResponsePlugin({
-        statuses: [0, 200],
-      }),
-      new ExpirationPlugin({
-        maxEntries: 60, // Limit number of files
-        maxAgeSeconds: 30 * 24 * 60 * 60, // Cache for 30 Days
-      }),
-    ],
+  ({ request }) => ["style", "script", "worker"].includes(request.destination),
+    new StaleWhileRevalidate({
+      cacheName: 'asset-cache',
+      plugins: [
+        new CacheableResponsePlugin({
+          statuses: [0, 200],
+        }),
+
+      ],
   })
 );
 
-// Cache image files with a Cache First strategy for long term caching
-registerRoute(
-  ({ request }) => request.destination === 'image',
-  new CacheFirst({
-    cacheName: 'image-cache',
-    plugins: [
-      new CacheableResponsePlugin({
-        statuses: [0, 200],
-      }),
-      new ExpirationPlugin({
-        maxEntries: 30, // Limit number of images
-        maxAgeSeconds: 60 * 24 * 60 * 60, // Cache for 60 Days
-      }),
-    ],
-  })
-);
+// handle fetch events
+self.addEventListener('fetch', (event) => {
+  console.log('Fetching:', event.request.url);
+
+  event.respondWith(
+       fetch(event.request).catch((error) => {
+            console.error('Fetch error:', error);
+
+            // offline response here
+            const offlineResponse = new Response('<h1>Offline</h1>', {
+                 headers: { 'Content-Type': 'text/html' },
+            });
+
+            return offlineResponse;
+       })
+  );
+});
