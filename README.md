@@ -147,6 +147,6 @@ For any questions about this project, please contact me via:
 This project is licensed under the MIT License. See the [LICENSE][MIT] file for more details.
 
 
-[pwa-text-editor]: <https://My-PWA-Text-Editor-App.onrender.com/>
+[pwa-text-editor]: <https://pwatexteditor-qrqq.onrender.com>
 [starter-code]: <https://github.com/coding-boot-camp/cautious-meme>
 [MIT]: <https://github.com/naturuplift/PWATextEditor/blob/main/LICENSE>
