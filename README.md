@@ -110,7 +110,7 @@ The following image shows the application's manifest.json file:
 ![App-manifest_json file](https://github.com/naturuplift/PWATextEditor/assets/23546356/4d10212a-e24c-4bf5-8301-04f7c3e9a1b3)
 
 The following image shows the application's registered service worker:
-![App registered service worker](https://github.com/naturuplift/PWATextEditor/assets/23546356/5514a5ad-35b9-429a-bfe3-ec4acd6fdb57)
+![App registered service worker](https://github.com/naturuplift/PWATextEditor/assets/23546356/92900920-6a59-4300-a491-99838a626158)
 
 The following image shows the application's IndexedDB storage:
 ![App IndexedDB storage](https://github.com/naturuplift/PWATextEditor/assets/23546356/04a58129-9328-4a09-ab64-50692f0a6eff)
