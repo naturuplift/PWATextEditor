@@ -34,6 +34,7 @@ PWA Text Editor is a project that harnesses the power of Progressive Web Applica
 - [Technology Stack](#technology-stack)
 - [Getting Started](#getting-started)
 - [Usage](#usage)
+- [Screenshots](#screenshots)
 - [Deployment](#deployment)
 - [Development Guidelines](#development-guidelines)
 - [Starter Code](#starter-code)
@@ -95,8 +96,24 @@ This will launch both the backend and frontend portions of the application, maki
 ## Usage
 
 - **Editing:** Simply type in the text editor to begin creating your notes or code snippets.
+
+  
 - **Saving:** Your work is automatically saved to IndexedDB, ensuring you won't lose your progress, even if you go offline.
 - **Accessing Offline:** Thanks to the PWA functionality, you can continue to use the text editor without an internet connection.
+
+## Screenshots
+
+The following screenshot shows the application:
+![JATE_App](https://github.com/naturuplift/PWATextEditor/assets/23546356/69e673d8-9eda-4f31-b0e8-787c9da92691)
+
+The following image shows the application's manifest.json file:
+![App-manifest_json file](https://github.com/naturuplift/PWATextEditor/assets/23546356/4d10212a-e24c-4bf5-8301-04f7c3e9a1b3)
+
+The following image shows the application's registered service worker:
+![App registered service worker](https://github.com/naturuplift/PWATextEditor/assets/23546356/5514a5ad-35b9-429a-bfe3-ec4acd6fdb57)
+
+The following image shows the application's IndexedDB storage:
+![App IndexedDB storage](https://github.com/naturuplift/PWATextEditor/assets/23546356/04a58129-9328-4a09-ab64-50692f0a6eff)
 
 ## Deployment
 
@@ -130,6 +147,6 @@ For any questions about this project, please contact me via:
 This project is licensed under the MIT License. See the [LICENSE][MIT] file for more details.
 
 
-[pwa-text-editor]: <https://My-PWA-Text-Editor-App.onrender.com/>
+[pwa-text-editor]: <https://pwatexteditor-qrqq.onrender.com>
 [starter-code]: <https://github.com/coding-boot-camp/cautious-meme>
 [MIT]: <https://github.com/naturuplift/PWATextEditor/blob/main/LICENSE>
